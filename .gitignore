@@ -1,2 +1,5 @@
 # Archivos generados por Python
 __pycache__/
+
+# Ejecutable
+/build/
