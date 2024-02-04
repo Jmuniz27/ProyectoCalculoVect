@@ -23,7 +23,7 @@ if a is not None and n is not None:
     valorTraza = trazaConSum(a,n)
     
     #Interfaz grafica
-    fig = plt.figure(figsize=(8,9))
+    fig = plt.figure(figsize=(11,11))
     ax = fig.add_subplot(111, projection='3d')
 
     def grafCilindro(a):
@@ -60,13 +60,13 @@ if a is not None and n is not None:
     grafPlano(a)
     traza(a)
     # Agregar texto dentro de la ventana de Matplotlib
-    ax.text2D(0.5, 0, f"El valor de la traza es: {valorTraza}", transform=ax.transAxes,ha='center', va='center', fontsize=14, bbox=dict(boxstyle='round', facecolor='silver', alpha=1))
+    ax.text2D(0.5, 0, f"El valor de la traza es: {valorTraza}", transform=ax.transAxes,ha='center', va='center', fontsize=14, bbox=dict(boxstyle='round', facecolor='lightskyblue', alpha=1))
     
     # Configurar el aspecto del gráfico
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
-    ax.set_title(f'Calculo Traza $x^2 + y^2 = {a}^2$ y x+y+2z=8')
+    ax.set_title(f'Cálculo de la longitud de la traza entre $x^2 + y^2 = {a}^2$ y x+y+2z=8')
     # Ajustar automáticamente la escala de los ejes
     ax.autoscale(enable=False)
 
