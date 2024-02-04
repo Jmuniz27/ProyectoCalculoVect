@@ -38,7 +38,7 @@ if a is not None and n is not None:
         y_cili = r * np.sin(theta)
 
         # Graficar el cilindro
-        ax.plot_surface(x_cili,y_cili,z_cili, color='red',zorder=0,alpha=0.15)
+        ax.plot_surface(x_cili,y_cili,z_cili, color='crimson',zorder=0,alpha=0.3)
 
     def grafPlano(a):
         def z(x,y):
@@ -47,7 +47,7 @@ if a is not None and n is not None:
         y_plano = np.linspace(-10*a/2,10*a/2)
         x_plano,y_plano = np.meshgrid(x_plano,y_plano)
         z_plano = z(x_plano,y_plano)
-        ax.plot_surface(x_plano,y_plano,z_plano,color='blue',zorder=2,alpha=0.45)
+        ax.plot_surface(x_plano,y_plano,z_plano,color='dodgerblue',zorder=2,alpha=0.45)
 
     def traza(a):
         t = np.linspace(0,2*np.pi)
@@ -60,7 +60,7 @@ if a is not None and n is not None:
     grafPlano(a)
     traza(a)
     # Agregar texto dentro de la ventana de Matplotlib
-    ax.text2D(0.05, 0.95, f"El valor de la traza es: {valorTraza}", transform=ax.transAxes,ha='center', va='center', fontsize=16, bbox=dict(boxstyle='round', facecolor='plum', alpha=0.6))
+    ax.text2D(0.5, 0, f"El valor de la traza es: {valorTraza}", transform=ax.transAxes,ha='center', va='center', fontsize=14, bbox=dict(boxstyle='round', facecolor='silver', alpha=1))
     
     # Configurar el aspecto del gráfico
     ax.set_xlabel('X')
